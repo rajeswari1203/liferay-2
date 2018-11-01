@@ -10,7 +10,7 @@ bash "set the java home " do
      tar -zxvf jdk*
    EOH
    end
- ruby_block 'Set JAVA_HOME in /etc/environment' do
+ ruby_block 'Set JAVA_HOME in bash' do
     block do
       file = Chef::Util::FileEdit.new('/root/.bash_profile')
       file.insert_line_if_no_match(/export JAVA_HOME=/, "export JAVA_HOME=#{node['java']['java_home']}")
