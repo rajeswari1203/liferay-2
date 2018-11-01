@@ -4,3 +4,5 @@ default['ehcache']['path']  = "#{node['liferay']['install_location']}/ehcache-2.
 default['ehcache']['download_url'] = "http://d2zwv9pap9ylyd.cloudfront.net/ehcache-2.10.5-distribution.tar.gz"
 default['liferay']['path'] = "/opt/SP/weloadm/software/liferay-ce-portal-7.0-ga3"
 default['tomcat']['path']    = "#{node['liferay']['path']}/tomcat-8.0.32"
+default['java']['java_home']= "/opt/SP/weloadm/software/jdk1.8.0_19"
+default['java']['jre_home']= "/opt/SP/weloadm/software/jdk1.8.0_191/jre"

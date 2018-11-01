@@ -1,1 +1,1 @@
-cookbook_path "/root/chef-repo/cookbooks"
+cookbook_path "/home/ec2-user/liferay-2/cookbooks"

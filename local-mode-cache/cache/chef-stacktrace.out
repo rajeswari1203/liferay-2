@@ -1,0 +1,140 @@
+Generated at 2018-11-01 10:42:02 +0000
+Mixlib::ShellOut::ShellCommandFailed: bash[set the java home ] (liferay::default line 6) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '2'
+---- Begin output of "bash"  "/tmp/chef-script20181101-18761-1gxqmpr" ----
+STDOUT: 
+STDERR: --2018-11-01 10:42:01--  http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
+Resolving download.oracle.com (download.oracle.com)... 23.50.90.75
+Connecting to download.oracle.com (download.oracle.com)|23.50.90.75|:80... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://edelivery.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz [following]
+--2018-11-01 10:42:01--  https://edelivery.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
+Resolving edelivery.oracle.com (edelivery.oracle.com)... 104.122.105.43, 2600:140f:4:196::2d3e, 2600:140f:4:1a0::2d3e
+Connecting to edelivery.oracle.com (edelivery.oracle.com)|104.122.105.43|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz?AuthParam=1541069041_7a83881cbc738a54eb6169f627eda84b [following]
+--2018-11-01 10:42:01--  http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz?AuthParam=1541069041_7a83881cbc738a54eb6169f627eda84b
+Connecting to download.oracle.com (download.oracle.com)|23.50.90.75|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz?AuthParam=1541069041_7a83881cbc738a54eb6169f627eda84b [following]
+--2018-11-01 10:42:01--  https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz?AuthParam=1541069041_7a83881cbc738a54eb6169f627eda84b
+Connecting to download.oracle.com (download.oracle.com)|23.50.90.75|:443... connected.
+HTTP request sent, awaiting response... 416 Requested Range Not Satisfiable
+
+    The file is already fully retrieved; nothing to do.
+
+tar (child): jdk1.8.0_191: Cannot read: Is a directory
+tar (child): At beginning of tape, quitting now
+tar (child): Error is not recoverable: exiting now
+
+gzip: stdin: unexpected end of file
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+---- End output of "bash"  "/tmp/chef-script20181101-18761-1gxqmpr" ----
+Ran "bash"  "/tmp/chef-script20181101-18761-1gxqmpr" returned 2
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/mixlib-shellout-2.4.0/lib/mixlib/shellout.rb:297:in `invalid!'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/mixlib-shellout-2.4.0/lib/mixlib/shellout.rb:284:in `error!'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/mixin/shell_out.rb:202:in `shell_out_compacted!'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/mixin/shell_out.rb:124:in `shell_out!'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/provider/execute.rb:58:in `block in action_run'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/mixin/why_run.rb:51:in `add_action'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/provider.rb:227:in `converge_by'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/provider/execute.rb:56:in `action_run'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/provider/script.rb:64:in `action_run'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/provider.rb:182:in `run_action'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/resource.rb:577:in `run_action'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/runner.rb:70:in `run_action'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/runner.rb:98:in `block (2 levels) in converge'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/runner.rb:98:in `each'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/runner.rb:98:in `block in converge'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/resource_collection/resource_list.rb:94:in `block in execute_each_resource'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/resource_collection/stepable_iterator.rb:114:in `call_iterator_block'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/resource_collection/stepable_iterator.rb:85:in `step'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/resource_collection/stepable_iterator.rb:103:in `iterate'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/resource_collection/resource_list.rb:92:in `execute_each_resource'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/runner.rb:97:in `converge'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/client.rb:720:in `block in converge'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/client.rb:715:in `catch'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/client.rb:715:in `converge'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/client.rb:754:in `converge_and_save'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/client.rb:286:in `run'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/application.rb:303:in `run_with_graceful_exit_option'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/application.rb:279:in `block in run_chef_client'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/local_mode.rb:44:in `with_server_connectivity'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/application.rb:261:in `run_chef_client'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/application/client.rb:440:in `run_application'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/application.rb:66:in `run'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/application/solo.rb:224:in `run'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/bin/chef-solo:24:in `<top (required)>'
+/bin/chef-solo:74:in `load'
+/bin/chef-solo:74:in `<main>'
+
+>>>> Caused by Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '2'
+---- Begin output of "bash"  "/tmp/chef-script20181101-18761-1gxqmpr" ----
+STDOUT: 
+STDERR: --2018-11-01 10:42:01--  http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
+Resolving download.oracle.com (download.oracle.com)... 23.50.90.75
+Connecting to download.oracle.com (download.oracle.com)|23.50.90.75|:80... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: https://edelivery.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz [following]
+--2018-11-01 10:42:01--  https://edelivery.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz
+Resolving edelivery.oracle.com (edelivery.oracle.com)... 104.122.105.43, 2600:140f:4:196::2d3e, 2600:140f:4:1a0::2d3e
+Connecting to edelivery.oracle.com (edelivery.oracle.com)|104.122.105.43|:443... connected.
+HTTP request sent, awaiting response... 302 Moved Temporarily
+Location: http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz?AuthParam=1541069041_7a83881cbc738a54eb6169f627eda84b [following]
+--2018-11-01 10:42:01--  http://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz?AuthParam=1541069041_7a83881cbc738a54eb6169f627eda84b
+Connecting to download.oracle.com (download.oracle.com)|23.50.90.75|:80... connected.
+HTTP request sent, awaiting response... 301 Moved Permanently
+Location: https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz?AuthParam=1541069041_7a83881cbc738a54eb6169f627eda84b [following]
+--2018-11-01 10:42:01--  https://download.oracle.com/otn-pub/java/jdk/8u191-b12/2787e4a523244c269598db4e85c51e0c/jdk-8u191-linux-x64.tar.gz?AuthParam=1541069041_7a83881cbc738a54eb6169f627eda84b
+Connecting to download.oracle.com (download.oracle.com)|23.50.90.75|:443... connected.
+HTTP request sent, awaiting response... 416 Requested Range Not Satisfiable
+
+    The file is already fully retrieved; nothing to do.
+
+tar (child): jdk1.8.0_191: Cannot read: Is a directory
+tar (child): At beginning of tape, quitting now
+tar (child): Error is not recoverable: exiting now
+
+gzip: stdin: unexpected end of file
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+---- End output of "bash"  "/tmp/chef-script20181101-18761-1gxqmpr" ----
+Ran "bash"  "/tmp/chef-script20181101-18761-1gxqmpr" returned 2
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/mixlib-shellout-2.4.0/lib/mixlib/shellout.rb:297:in `invalid!'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/mixlib-shellout-2.4.0/lib/mixlib/shellout.rb:284:in `error!'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/mixin/shell_out.rb:202:in `shell_out_compacted!'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/mixin/shell_out.rb:124:in `shell_out!'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/provider/execute.rb:58:in `block in action_run'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/mixin/why_run.rb:51:in `add_action'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/provider.rb:227:in `converge_by'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/provider/execute.rb:56:in `action_run'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/provider/script.rb:64:in `action_run'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/provider.rb:182:in `run_action'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/resource.rb:577:in `run_action'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/runner.rb:70:in `run_action'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/runner.rb:98:in `block (2 levels) in converge'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/runner.rb:98:in `each'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/runner.rb:98:in `block in converge'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/resource_collection/resource_list.rb:94:in `block in execute_each_resource'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/resource_collection/stepable_iterator.rb:114:in `call_iterator_block'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/resource_collection/stepable_iterator.rb:85:in `step'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/resource_collection/stepable_iterator.rb:103:in `iterate'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/resource_collection/resource_list.rb:92:in `execute_each_resource'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/runner.rb:97:in `converge'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/client.rb:720:in `block in converge'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/client.rb:715:in `catch'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/client.rb:715:in `converge'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/client.rb:754:in `converge_and_save'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/client.rb:286:in `run'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/application.rb:303:in `run_with_graceful_exit_option'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/application.rb:279:in `block in run_chef_client'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/local_mode.rb:44:in `with_server_connectivity'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/application.rb:261:in `run_chef_client'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/application/client.rb:440:in `run_application'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/application.rb:66:in `run'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/lib/chef/application/solo.rb:224:in `run'
+/opt/chef/embedded/lib/ruby/gems/2.5.0/gems/chef-14.6.47/bin/chef-solo:24:in `<top (required)>'
+/bin/chef-solo:74:in `load'
+/bin/chef-solo:74:in `<main>'

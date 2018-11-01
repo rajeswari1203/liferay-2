@@ -1,0 +1,8 @@
+default['liferay']['install_location']  = "/opt/SP/weloadm/software"
+default['liferay']['download_url'] = "https://downloads.sourceforge.net/project/lportal/Liferay%20Portal/7.0.2%20GA3/liferay-ce-portal-tomcat-7.0-ga3-20160804222206210.zip"
+default['ehcache']['path']  = "#{node['liferay']['install_location']}/ehcache-2.10.5"
+default['ehcache']['download_url'] = "http://d2zwv9pap9ylyd.cloudfront.net/ehcache-2.10.5-distribution.tar.gz"
+default['liferay']['path'] = "/opt/SP/weloadm/software/liferay-ce-portal-7.0-ga3"
+default['tomcat']['path']    = "#{node['liferay']['path']}/tomcat-8.0.32"
+default['java']['java_home']= "/opt/SP/weloadm/software/jdk1.8.0_19"
+default['java']['jre_home']= "/opt/SP/weloadm/software/jdk1.8.0_191/jre"
